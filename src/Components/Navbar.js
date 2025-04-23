@@ -144,6 +144,15 @@ function Navbar() {
             toggleMode={toggleMode}
             isDarkMode={darkMode}
           />
+          <NavToggle
+            icon={darkMode ? <ImSun /> : <PiMoonBold />}
+            expand={expand}
+            closeExpand={closeExpand}
+            tooltip={darkMode ? "ON" : "OFF"}
+            label="ToggleMode"
+            toggleMode={toggleMode}
+            isDarkMode={darkMode}
+          />
         </>
       )}
 
