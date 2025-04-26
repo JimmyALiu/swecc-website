@@ -98,14 +98,14 @@ function Navbar() {
       {!isMobile && (
         <>
           <NavItem
-            icon=<FcHome />
+            icon={<FcHome />}
             route="/"
             closeExpand={closeExpand}
             tooltip="Home"
             label="Home"
           />
           <NavItem
-            icon=<FcConferenceCall />
+            icon={<FcConferenceCall />}
             route="/Officers"
             expand={expand}
             closeExpand={closeExpand}
@@ -113,7 +113,7 @@ function Navbar() {
             label="Officers"
           />
           <NavItem
-            icon=<FaHeart />
+            icon={<FaHeart />}
             route="/Sponsor"
             expand={expand}
             closeExpand={closeExpand}
@@ -121,14 +121,14 @@ function Navbar() {
             label="Sponsors"
           />
           <NavItem
-            icon=<FcCalendar />
+            icon={<FcCalendar />}
             route="/Events"
             closeExpand={closeExpand}
             tooltip="Events"
             label="Events"
           />
           <NavItem
-            icon=<FcCheckmark />
+            icon={<FcCheckmark />}
             route="/Join-Now"
             expand={expand}
             closeExpand={closeExpand}
