@@ -25,7 +25,7 @@ import {
   FcViewDetails,
 } from "react-icons/fc";
 import { ImIcoMoon, ImSun } from "react-icons/im";
-import { PiMoonBold } from "react-icons/pi";
+import { PiMoonBold, PiTextAaBold } from "react-icons/pi";
 import { NavBar, NavExpandItem, NavItem, NavToggle } from "./Utils/NavItems";
 import SWECCLogoWhite from "../Data/img/Logo/SWECCLogoWhite.png";
 import Switch from "./Switch.js";
@@ -136,11 +136,11 @@ function Navbar() {
             label="Join"
           />
           <NavToggle
-            icon={darkMode ? <ImSun /> : <PiMoonBold />}
+            icon={<PiTextAaBold />}
             expand={expand}
             closeExpand={closeExpand}
-            tooltip={darkMode ? "ON" : "OFF"}
-            label="ToggleMode"
+            tooltip={"Text"}
+            label="ToggleTextSettings"
             toggleMode={toggleMode}
             isDarkMode={darkMode}
           />
