@@ -135,15 +135,13 @@ function Navbar() {
             tooltip="Join"
             label="Join"
           />
-          <NavToggle
+          <NavExpandItem
             icon={<PiTextAaBold />}
             expand={expand}
-            closeExpand={closeExpand}
-            tooltip={"Text"}
-            label="ToggleTextSettings"
-            toggleMode={toggleMode}
-            isDarkMode={darkMode}
-          />
+            togglExpand={togglExpand}
+          >
+            <TextDropdownMenu closeExpand={closeExpand}></TextDropdownMenu>  {/* swap to custom component */}
+          </NavExpandItem>
           <NavToggle
             icon={darkMode ? <ImSun /> : <PiMoonBold />}
             expand={expand}
@@ -168,6 +166,26 @@ function Navbar() {
       )}
     </NavBar>
   );
+}
+
+function TextDropdownMenu(props) {
+
+  function TextDropdownItem(props) {
+    const { onClick, icon } = props;
+    return (
+      <button
+        onClick={onClick}
+      >{icon}</button>
+    )
+  }
+
+  return (
+    <div>
+      <TextDropdownItem onClick={() => console.log("test")} icon={<PiTextAaBold />}></TextDropdownItem>
+      <TextDropdownItem onClick={() => console.log("test")} icon={<PiTextAaBold />}></TextDropdownItem>
+      <TextDropdownItem onClick={() => console.log("test")} icon={<PiTextAaBold />}></TextDropdownItem>
+    </div>
+  )
 }
 
 function DropdownMenu(props) {
